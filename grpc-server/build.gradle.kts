@@ -5,6 +5,7 @@ plugins {
 dependencies {
     api(project(":grpc-common"))
     implementation("io.grpc:grpc-netty:1.33.1")
+    implementation("com.linecorp.armeria:armeria:0.95.0")
     implementation("io.github.lognet:grpc-spring-boot-starter:4.0.0")
     implementation("org.springframework.boot:spring-boot-starter-web")
 }

@@ -9,6 +9,7 @@ import org.lognet.springboot.grpc.GRpcService
 class HelloService: GreeterGrpcKt.GreeterCoroutineImplBase() {
 
     override suspend fun sayHello(request: HelloRequest): HelloReply {
+        println("request: ${request.name}")
         return HelloReply.newBuilder()
             .setMessage("Hello ===> ${request.name}")
             .build()
