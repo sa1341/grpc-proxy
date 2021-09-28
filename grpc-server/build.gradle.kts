@@ -5,9 +5,14 @@ plugins {
 dependencies {
     api(project(":grpc-common"))
     implementation("io.grpc:grpc-netty:1.33.1")
-    implementation("com.linecorp.armeria:armeria:0.95.0")
+    implementation("io.grpc:grpc-netty-shaded:1.37.0")
+    // armeria
+    implementation("com.linecorp.armeria:armeria:1.7.2")
+    implementation("com.linecorp.armeria:armeria-grpc:1.7.2")
     implementation("io.github.lognet:grpc-spring-boot-starter:4.0.0")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    //implementation("com.linecorp.armeria:armeria-spring-boot-webflux-starter:0.95.0")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.10")
 }
 
 // true 시에 *-SNAPSHOT.jar에 기본 Manifest 속성이 없습니다  발생
